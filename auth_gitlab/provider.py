@@ -23,6 +23,12 @@ class GitLabOAuth2Provider(OAuth2Provider):
             FetchUser()
         ]
 
+    def get_client_id(self):
+        return self.client_id
+
+    def get_client_secret(self):
+        return self.client_secret
+
     def get_refresh_token_url(self):
         return ACCESS_TOKEN_URL
 
