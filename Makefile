@@ -1,11 +1,12 @@
-.PHONY: dist
+.PHONY: dist venv
 
-test:
-	pip install -e .
-	pip install "file://`pwd`#egg=sentry-auth-gitlab[tests]"
-	py.test -x
+venv:
+	python3 -m venv venv
+	. venv/bin/activate && pip install setuptools wheel twine
 
 dist:
+	mkdir -p dist
+	rm -rf dist/*
 	python setup.py sdist
 
 publish: dist

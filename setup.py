@@ -23,15 +23,15 @@ install_requires = [
 HERE = os.path.dirname(os.path.realpath(__file__))
 
 # The text of the README file
-with open(HERE + "/README.rst", 'r') as f:
+with open(HERE + "/README.md", 'r') as f:
     README = f.read()
 
 setup(
     name='sentry-auth-gitlab-v2',
-    version='0.2.4',
+    version='0.4.2',
     author='Zakhar Bessarab',
     author_email='zekker6@gmail.com',
-    url='https://github.com/zekker6',
+    url='https://github.com/zekker6/sentry-auth-gitlab',
     description='Gitlab authentication provider for Sentry',
     long_description=README,
     long_description_content_type="text/markdown",
